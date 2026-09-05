@@ -7,7 +7,7 @@ def rb(t):
  for line in t.splitlines(keepends=True):
   low=line.lower()
   if '@author' in low or 'copyright' in low: out.append(line); continue
-  line=line.replace('BEEFY','BOOFY').replace('Beefy','Boofy').replace('beefy','boofy')
+  line=line.replace('BOOFY','BOOFY').replace('Boofy','Boofy').replace('boofy','boofy')
   out.append(line)
  return ''.join(out)
 for p in list(root.rglob('*')):
@@ -18,7 +18,7 @@ for p in list(root.rglob('*')):
  n=rb(t)
  if n!=t: p.write_text(n,encoding='utf-8')
 for p in sorted([x for x in root.rglob('*') if '.git' not in x.parts and '.github' not in x.parts],key=lambda x:len(x.parts),reverse=True):
- n=p.name.replace('BEEFY','BOOFY').replace('Beefy','Boofy').replace('beefy','boofy')
+ n=p.name.replace('BOOFY','BOOFY').replace('Boofy','Boofy').replace('boofy','boofy')
  if n!=p.name and p.exists() and not p.with_name(n).exists(): p.rename(p.with_name(n))
 p=root/'package.json'
 if p.exists():
