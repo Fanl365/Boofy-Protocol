@@ -1,3 +1,5 @@
+<p align="center"><img src="./assets/boofy-banner.svg" width="100%" alt="Boofy — Build · Connect · Grow" /></p>
+
 # Boofy Protocol
 
 Boofy Protocol is the protocol-level repository for the Boofy DeFi project. It contains protocol architecture, governance/deployment-related source material, and supporting components that sit alongside Boofy App, Boofy API, and Boofy Contracts.
